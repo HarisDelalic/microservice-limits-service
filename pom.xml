@@ -33,6 +33,14 @@
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
+<!--        When there are many microservices, together with many instances it is hard to invoke-->
+<!--        http://domain:port/actuator/refresh in order to refresh configs.-->
+<!--        Instead, we are using Spring Cloud Bus-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
